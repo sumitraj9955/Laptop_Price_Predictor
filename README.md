@@ -1,145 +1,112 @@
-Laptop Price Predictor 💻✨
-Welcome to the Laptop Price Predictor! This project uses machine learning to estimate the price of a laptop based on its hardware and features, all wrapped in a user-friendly web app built with Streamlit.
+💻 Laptop Price Predictor
 
-🚀 Live Demo
-A live version of the app is deployed here:
+An AI-powered Laptop Price Prediction web app built with Machine Learning and Streamlit.
+This project predicts the approximate price of a laptop based on its specifications like Brand, Type, RAM, Weight, Screen, Processor, GPU, and Storage.
 
-➡️ [Your Deployed Streamlit App Link Here]
+🔮 The model gives predictions that are very close to actual market prices (verified using Amazon listings).
 
-✨ Core Features
-🎨 Intuitive UI: A clean and simple web interface for users to input laptop specifications.
+✨ Features
 
-⌨️ Comprehensive Inputs: Select from various brands, CPU, GPU, RAM, storage types, and other key features.
+🧹 Data Cleaning & Preprocessing
 
-⚡ Instant Predictions: Get an estimated price for any laptop configuration in real-time.
+📊 Exploratory Data Analysis (EDA) for insights
 
-🎯 High Accuracy: The model is built using a robust Random Forest algorithm, providing reliable price estimates.
+🤖 Tried multiple ML Algorithms:
 
-⚙️ Project Workflow
-This project follows a standard machine learning pipeline:
+Linear Regression
 
-📦 Data Collection: Gathered a comprehensive dataset of laptop listings with their specifications and prices.
+Decision Tree
 
-🧹 Data Cleaning & Preprocessing: Handled missing values, removed duplicates, and transformed categorical data into a machine-readable format.
+Random Forest 🌲
 
-📊 Exploratory Data Analysis (EDA): Performed in-depth analysis to uncover trends and feature relationships.
+Ridge Regression
 
-🤖 Model Training & Selection: Trained and evaluated several regression models, including Linear Regression, Lasso, Ridge, and Decision Trees.
+Lasso
 
-🌐 Deployment: Integrated the best-performing model into an interactive web application using Streamlit.
+Boosting Algorithms
 
-📈 Model Performance
-The Random Forest Regressor was chosen as the final model for its superior performance and ability to capture complex non-linear relationships.
+✅ Best Model: Random Forest Regressor with R² Score = 0.86
 
-Evaluation Metric: R² Score
+🌐 Interactive Web App using Streamlit
 
-🏆 Best R² Score: 0.86
+💰 Real-world validation: Predictions match closely with Amazon prices
 
-This score indicates that our model can explain approximately 86% of the variance in laptop prices, making it a strong and reliable predictor.
+🛠 Tech Stack
 
-✅ Real-World Validation
-The model's predictions are remarkably close to actual market prices. Here's a direct comparison with a listing on Amazon:
+Python 🐍
 
-1. Our Prediction
-The following configuration was entered into our Streamlit app:
+Scikit-learn, Pandas, Numpy (Machine Learning)
 
-Feature
+Streamlit (Frontend for prediction)
 
-Value
-
-Brand
-
-HP
-
-RAM
-
-16 GB
-
-Screen Resolution
-
-1920x1080
-
-CPU
-
-Intel Core i3
-
-SSD
-
-512 GB
-
-OS
-
-Windows
-
-<br/>
-
-💰 Predicted Price: ₹ 67,785
-2. Actual Amazon Listing
-A similar laptop was found on Amazon.
-
-Feature
-
-Value
-
-Brand
-
-HP
-
-RAM
-
-16 GB
-
-SSD
-
-512 GB
-
-CPU
-
-Intel Core i7 (13th Gen)
-
-<br/>
-
-🏷️ Actual Price: ₹ 67,990
-Observation: Despite the Amazon listing having a more powerful Core i7 processor (compared to the Core i3 we predicted for), our model's estimate is incredibly close to the actual selling price. This showcases the model's effectiveness in real-world scenarios!
-
-🛠️ Tech Stack
-Language: Python
-
-Libraries: Pandas, NumPy, Scikit-learn
-
-Visualization: Matplotlib, Seaborn
-
-Web Framework: Streamlit
+Matplotlib & Seaborn (EDA & Visualization)
 
 📂 Project Structure
-.
-├── assets/
-│   ├── prediction.png      # Screenshot of the app prediction
-│   └── amazon.jpg          # Screenshot of the Amazon listing
-├── notebooks/
-│   └── EDA_and_Model.ipynb # Jupyter Notebook for analysis
-├── app.py                  # Main Streamlit application file
-├── model.pkl               # Saved machine learning model
-├── requirements.txt        # Project dependencies
-└── README.md
+Laptop-Price-Predictor/
+│── data/                 # Dataset used
+│── notebooks/            # EDA and ML experiments
+│── app.py                # Streamlit web app
+│── model.pkl             # Trained ML model
+│── requirements.txt      # Dependencies
+│── README.md             # Project Documentation
+│── screenshots/          # Screenshots of the app
 
-🚀 How to Run Locally
+📈 Algorithm & Model
+
+After testing multiple ML algorithms, Random Forest Regressor was chosen as the final model.
+
+Achieved R² Score: 0.8595 🎯
+
+The model generalizes well and performs better compared to linear models.
+
+🖥 How to Run Locally
+
 Clone the repository:
 
-git clone [https://github.com/your-username/laptop-price-predictor.git](https://github.com/your-username/laptop-price-predictor.git)
-cd laptop-price-predictor
+git clone https://github.com/your-username/Laptop-Price-Predictor.git
+cd Laptop-Price-Predictor
 
-Set up a virtual environment:
-
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 Install dependencies:
 
 pip install -r requirements.txt
 
-Launch the app:
+
+Run Streamlit app:
 
 streamlit run app.py
 
-Open your browser and go to http://localhost:8501.
+
+Open in browser 🌍
+
+http://localhost:8501/
+
+📸 Screenshots
+
+👉 Keep your screenshots inside a folder named screenshots/ in your repo, and name them like below:
+
+🔹 Web App UI (Prediction Form)
+
+🔹 Predicted Price Output
+
+🔹 Actual Amazon Laptop Price
+
+✔️ Example:
+
+Predicted Price: ₹67,785
+
+Amazon Price: ₹67,990
+➡️ Model is giving approx. correct results 🎯
+
+🔮 Future Improvements
+
+Deploy on Streamlit Cloud / AWS / Heroku for public access
+
+Add Deep Learning model for better predictions
+
+Improve UI with more interactive visualizations
+
+👩‍💻 Author
+
+Sumit Raj ✨
+📌 Final Year | Computer Science & Engineering
